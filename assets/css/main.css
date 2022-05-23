@@ -97,12 +97,8 @@ body.dark {
 /* section hero */
 #hero-section {
     width: 100%;
-<<<<<<< HEAD
-    border-bottom: 2px solid #fa0;
-=======
     height: auto;
     border-bottom: 2px solid var(--primary-color);
->>>>>>> 1105167a31df8d86ac1b99d367fb52d93205d57d
 }
 
 
