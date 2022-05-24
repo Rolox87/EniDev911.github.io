@@ -16,15 +16,15 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="dark">
+<body>
   <!-- ************************ Navigation ******************************** -->
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top border-bottom border-2 border-warning m-0 p-0">
+  <nav class="navbar navbar-expand-lg fixed-top m-0 p-0 shadow" id="navbar">
     <div class="container-sm">
       <a class="navbar-brand m-0 p-0" href="#">
         <img src="assets/img/logo_sin_bg.png" class="img-fluid" style="height:3.3rem;" onclick="showAvatar();">
       </a>
-      <div class="switches border border-danger">
-        <div id="toggle-theme" class="toggle-theme">
+      <div class="switches">
+        <div id="toggle-theme" class="toggle-theme badge bg-secondary">
           <img id="toggle-icon" src="assets/img/logo/moon.svg" alt="icon theme" class="toggle-theme__icon">
           <p id="toggle-text" class="toggle-theme__text">Dark Mode</p>
         </div>
@@ -106,7 +106,6 @@
           <video class="d-block w-100" autoplay loop muted>
             <source src="assets/media/two.mp4" type="video/mp4" />
             Tu navegador no puede reproducirlo
-
           </video>
         </div>
         <!-- thrid item -->
@@ -135,10 +134,10 @@
   <!-- about section -->
   <!-- About -->
   <section id="about" class="container my-5">
-    <div class="row w-100 mx-auto">
+    <div class="row w-100 mx-auto p-3 rounded shadow">
       <div class="col-12 col-lg-5 mb-1">
-        <div class="rounded bg-body shadow-1 card-hover">
-          <div class="w-100 shadow-sm">
+        <div class="rounded shadow-1 card-hover">
+          <div class="w-100">
             <img src="assets/img/about/02.jpg" alt="" id="aboutMe" class="w-100 h-100 rounded" style="cursor: pointer;">
           </div>
         </div>
@@ -152,25 +151,24 @@
     <div class="row mt-3 text-center mx-auto">
       <div class="col-12 col-md-6 col-lg-4 col-xl my-2">
         <!-- Cards-1 DevOps -->
-        <div class="card border card-hover shadow card-dark">
+        <div class="card border card-hover shadow">
           <div class="card-header p-0 m-0">
-            <i class="fas fa-terminal fa-3x my-3"></i>
+            <i class="fab fa-fedora fa-5x my-3"></i>
           </div>
           <div class="card-body">
             <h3 class="my-3 fw-bold">DevOps</h3>
-            <p class="card-text my-3">A modo de abordar mi trabajo y para generar mayor valor a las plataformas
-              empresariales. Las
-              herramientas de automatización y prestación de servicios de alta calidad para una respuesta rápida a los
-              clientes.
+            <p class="card-text my-3">A modo de abordar mi trabajo y para generar mayor valor al desarrollo de
+              software. <a href="https://es.wikipedia.org/wiki/DevOps" target="_blank">DevOps</a> es una práctica muy
+              enriquecedora en todo sentido.
             </p>
           </div>
         </div>
       </div>
       <!-- card-2 designer -->
       <div class="col-12 col-md-6 col-lg-4 my-2">
-        <div class="card border card-hover shadow-2 card-dark">
+        <div class="card border card-hover shadow">
           <div class="card-header p-0 m-0">
-            <i class="fas fa-drafting-compass fa-3x my-3"></i>
+            <i class="fas fa-drafting-compass fa-5x my-3"></i>
           </div>
           <div class="card-body">
             <h3 class="my-3 fw-bold">Diseñador</h3>
@@ -185,9 +183,9 @@
       </div>
       <!-- card-3 writer comic -->
       <div class="col-12 col-md-6 col-lg-4 my-2">
-        <div class="card border card-hover shadow-sm card-dark">
+        <div class="card border card-hover shadow">
           <div class="card-header p-0 m-0">
-            <i class="fas fa-feather-alt fa-3x my-3"></i>
+            <i class="fas fa-feather-alt fa-5x my-3"></i>
           </div>
           <div class="card-body">
             <h3 class="my-3 fw-bold">Escritor de Cómics</h3>
@@ -201,12 +199,13 @@
     </div>
   </section>
   <!-- ******************** Work sections ****************************** -->
-  <section id="works" class="container-sm my-5 p-3 bg-dark bg-gradient rounded border border-secondary shadow">
-    <h2 class="display-4 fw-bold text-center text-light mb-3">Trabajos</h2>
+  <section id="works" class="container-sm my-5 p-3 rounded shadow">
+    <h2 class="display-4 fw-bold text-center mb-3">Trabajos</h2>
+    <!-- Sistema de grilla -->
     <div class="row">
       <div class="col-12 col-md-6 col-lg-4 py-2">
         <!-- Card-1 Landing-page -->
-        <article class="card">
+        <article class="card card-hover">
           <img src="assets/img/works/01.png" alt="css trabajo" class="img-top border border-warning rounded">
           <div class="card-body text-center card-dark">
             <!-- accordion -->
@@ -214,8 +213,7 @@
               <!-- tech -->
               <div class="accordion-item border-0 mb-2">
                 <h2 class="accordion-header" id="headingTech">
-                  <button type="button"
-                    class="btn btn-dark btn-lg btn-outline-warning border-0 w-100 text-uppercase text-start"
+                  <button type="button" class="btn btn-dark btn-lg border-0 w-100 text-uppercase text-start"
                     data-bs-toggle="collapse" data-bs-target="#collapseTech" aria-expanded="true"
                     aria-controls="collapseTech">Tecnologías
                     <i class="fas fa-caret-down fs-3"></i>
@@ -238,8 +236,7 @@
               <!-- description -->
               <div class="accordion-item border-0">
                 <h2 class="accordion-header" id="headingDescription">
-                  <button type="button"
-                    class="btn btn-dark btn-lg btn-outline-warning border-0 w-100 text-uppercase text-start"
+                  <button type="button" class="btn btn-lg border-0 w-100 text-uppercase text-start"
                     data-bs-toggle="collapse" data-bs-target="#collapseDescription" aria-expanded="true"
                     aria-controls="collapseDescription">Descripción <i class="fas fa-caret-down fs-3"></i></button>
                 </h2>
@@ -260,14 +257,14 @@
             <!-- end accordion -->
           </div>
           <!-- footer buttons card-1 -->
-          <div class=" card-footer d-flex justify-content-between">
+          <div class="card-footer d-flex justify-content-between">
             <a href="https://enidev911.github.io/fullstackjsg33/src/chanllenges/module-1/3-css/landing-page/courses/"
-              target="_blank" class="flex-fill btn btn-dark btn-outline-warning border-0 me-2">
+              target="_blank" class="flex-fill btn border-0 me-2">
               <i class="far fa-eye"></i>
               Ver demo
             </a>
             <a href="https://github.com/EniDev911/fullstackjsg33/blob/main/src/chanllenges/module-1/3-css/landing-page/courses/index.html"
-              target="_blank" class="flex-fill btn btn-dark btn-outline-warning border-0">
+              target="_blank" class="flex-fill btn border-0">
               <i class="fas fa-code"></i>
               Código
             </a>
@@ -276,7 +273,7 @@
       </div>
       <!-- Card-2 Iguana-Page -->
       <div class="col-12 col-md-6 col-lg-4 py-2">
-        <article class="card">
+        <article class="card card-hover">
           <img src="assets/img/works/02.png" alt="iguana trabajo" class="img-top border border-warning rounded">
           <div class="card-body text-center card-dark">
             <!-- accordion -->
@@ -284,8 +281,7 @@
               <!-- tech -->
               <div class="accordion-item mb-2 border-0">
                 <h2 class="accordion-header" id="headingTech2">
-                  <button type="button"
-                    class="btn btn-dark btn-lg btn-outline-warning border-0 w-100 text-uppercase text-start"
+                  <button type="button" class="btn btn-lg border-0 w-100 text-uppercase text-start"
                     data-bs-toggle="collapse" data-bs-target="#collapseTech2" aria-expanded="true"
                     aria-controls="collapseTech2">Tecnologías <i class="fas fa-caret-down fs-3"></i></button>
                 </h2>
@@ -306,8 +302,7 @@
               <!-- description -->
               <div class="accordion-item border-0">
                 <h2 class="accordion-header" id="headingDescription2">
-                  <button type="button"
-                    class="btn btn-dark btn-lg btn-outline-warning border-0 w-100 text-uppercase text-start"
+                  <button type="button" class="btn btn-lg border-0 w-100 text-uppercase text-start"
                     data-bs-toggle="collapse" data-bs-target="#collapseDescription2" aria-expanded="true"
                     aria-controls="collapseDescription2">Descripción <i class="fas fa-caret-down fs-3"></i></button>
                 </h2>
@@ -330,12 +325,12 @@
           <!-- footer buttons card-2 -->
           <div class="card-footer d-flex justify-content-between">
             <a href="https://enidev911.github.io/fullstackjsg33/src/chanllenges/module-1/4-positions/iguana-page/"
-              target="_blank" class="flex-fill btn btn-dark btn-outline-warning border-0 me-2">
+              target="_blank" class="flex-fill btn border-0 me-2">
               <i class="far fa-eye"></i>
               Ver demo
             </a>
             <a href="https://github.com/EniDev911/fullstackjsg33/tree/main/src/chanllenges/module-1/4-positions/iguana-page/index.html"
-              target="_blank" class="flex-fill btn btn-dark btn-outline-warning border-0">
+              target="_blank" class="flex-fill btn border-0">
               <i class="fas fa-code"></i>
               Código
             </a>
@@ -344,7 +339,7 @@
       </div>
       <!-- Card-3 Cuppon -->
       <div class="col-12 col-md-6 col-lg-4 py-2">
-        <article class="card">
+        <article class="card card-hover">
           <img src="assets/img/works/03.png" alt="cuppons trabajo" class="img-card-top border border-warning rounded">
           <div class="card-body card-dark">
             <!-- accordion -->
@@ -352,7 +347,7 @@
               <!-- tech -->
               <div class="accordion-item mb-2 border-0">
                 <h2 class="accordion-header" id="headingTech3">
-                  <button type="button" class="btn btn-dark btn-lg btn-outline-warning w-100 text-uppercase text-start"
+                  <button type="button" class="btn btn-dark btn-lg w-100 text-uppercase text-start"
                     data-bs-toggle="collapse" data-bs-target="#collapseTech3" aria-expanded="true"
                     aria-controls="collapseTech3">Tecnologías <i class="fas fa-caret-down fs-3"></i>
                   </button>
@@ -378,8 +373,7 @@
               <!-- description -->
               <div class=" accordion-item border-0">
                 <h2 class="accordion-header" id="headingDescription3">
-                  <button type="button"
-                    class="btn btn-dark btn-lg btn-outline-warning border-0 w-100 text-uppercase text-start"
+                  <button type="button" class="btn btn-lg border-0 w-100 text-uppercase text-start"
                     data-bs-toggle="collapse" data-bs-target="#collapseDescription3" aria-expanded="true"
                     aria-controls="collapseDescription3">Descripción <i class="fas fa-caret-down fs-3"></i></button>
                 </h2>
@@ -405,12 +399,12 @@
           <!-- footer buttons card-3 -->
           <div class="card-footer d-flex justify-content-between">
             <a href="https://enidev911.github.io/fullstackjsg33/src/chanllenges/module-1/5-bootstrap/cuppons/"
-              target="_blank" class="flex-fill btn btn-dark btn-outline-warning border-0 me-2">
+              target="_blank" class="flex-fill btn border-0 me-2">
               <i class="far fa-eye"></i>
               Ver demo
             </a>
             <a href="https://github.com/EniDev911/fullstackjsg33/blob/main/src/chanllenges/module-1/5-bootstrap/cuppons/index.html"
-              target="_blank" class="flex-fill btn btn-dark btn-outline-warning border-0">
+              target="_blank" class="flex-fill btn border-0">
               <i class="fas fa-code"></i>
               Código
             </a>
@@ -420,72 +414,162 @@
     </div>
   </section>
   <!-- skills and tools -->
-  <section id="skill" class="container-sm my-5 bg-dark bg-gradient rounded border border-secondary shadow p-0">
-    <h2 class="display-4 fw-bold text-center text-light py-3 mb-3 bg-secondary border border-body">SOFTWARE</h2>
+  <section id="skill-software" class="container-sm my-5 p-3 shadow p-0">
+    <h2 class="display-4 fw-bold text-center py-3 mb-3 border border-body">SOFTWARE</h2>
     <div class="container-sm">
-      <div class="row border border-danger">
+      <div class="row">
         <!-- Vs-Code -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="col-6 col-md-4 col-lg-3">
           <div class=" w-50 flex-shrink-1 flex-grow-1 mb-5 text-center mx-auto">
             <img src="assets/img/software/visual-studio-code.png" alt="css3" class="img-fluid w-75 logo"
-              data-bs-toggle="tooltip" data-bs-placement="bottom" title="Visual Studio Code" onclick="showMessage()">
+              data-bs-toggle="tooltip" data-bs-placement="bottom" title="VISUAL STUDIO CODE"
+              onclick="showMessage('Visual Studio Code', 
+              'visual-studio-code.png', '✏️ Editor de código<br>Sin duda creo que para el desarrollo web, Visual Studio Code viene preparado para hacernos la vida mucho más agradable, ya que cuenta con bastante herramientas. Además todo el set de extensiones que se pueden encontrar para todos los gustos.')" />
           </div>
         </div>
         <!-- Git -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="col-6 col-md-4 col-lg-3">
           <div class="w-50 flex-shrink-1 flex-grow-1 mb-5 mx-auto">
             <img src="assets/img/software/git.png" alt="git" class="img-fluid w-75 logo" data-bs-toggle="tooltip"
-              data-bs-placement="bottom" title="Git">
+              data-bs-placement="bottom" title="Git"
+              onclick="showMessage('GIT', 
+              'git.png', '&#x1f4d1; Lamentablemente, conocí a git no hace muchos años y se que en más de una ocasión me hubiera evitado un montón de problemas, por ejemplo; cuando toda nuestra información se ha borrado y no habíamos realizado copias de seguridad y empiezas a crear la historia del siglo al cliente o al profesor (particularmente me ocurrió en este último contexto).  Así es que Git es mi herramienta principal para comenzar a programar sea algo pequeño o medianamente grande.')">
           </div>
         </div>
         <!-- Windows Terminal -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="col-6 col-md-4 col-lg-3">
           <div class="w-50 flex-shrink-1 flex-grow-1 mb-5 mx-auto">
             <img src="assets/img/software/windows-terminal.png" alt="git" class="img-fluid w-75 logo"
-              data-bs-toggle="tooltip" data-bs-placement="bottom" title="Windows Terminal">
+              data-bs-toggle="tooltip" data-bs-placement="bottom" title="Windows Terminal"
+              onclick="showMessage('WINDOWS TERMINAL', 
+              'windows-terminal.png', `Aplicación de terminal moderna disponible en Windows 10 y posterior. Mejora sustancialmente la pobre terminal (cmd), incorporando características como soporte de pestañas, personalización de tipografía, efectos y también permite utilizar diferentes shells, como por ejemplo, el Símbolo de sistema de Windows (cmd), PowerShell o incluso la nueva WSL (Windows Subsystem for Linux)<br><i class='fas fa-terminal fa-1x'></i>`);">
           </div>
+
         </div>
         <!-- WSL Windows Subsystem For Linux -->
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="col-6 col-md-4 col-lg-3">
           <div class="w-50 flex-shrink-1 flex-grow-1 mb-5 mx-auto">
             <img src="assets/img/software/windows-subsystem-for-linux.png" alt="git" class="img-fluid w-75 logo"
-              data-bs-toggle="tooltip" data-bs-placement="bottom" title="Windows Subsystem For Linux">
+              data-bs-toggle="tooltip" data-bs-placement="bottom" title="Windows Subsystem For Linux"
+              onclick="showMessage('Windows Subsystem For Linux', 
+              'windows-subsystem-for-linux.png', `<b>WSL</b> en Windows, introduce una capa intermedia que funciona con un núcleo de Linux real (kernel) y en el que se pueden instalar distribuciones de GNU/Linux como por ejemplo Ubuntu, Debian, Kali o incluso la distribución minimalista Alpine.<br><i class='fas fa-linux fa-1x'></i>`);">
+          </div>
+        </div>
+        <!-- WEB DEVELOPMENT -->
+        <div class="col-12 col-md-3 col-lg-6 mx-auto">
+          <div class="card px-3 py-3">
+            <div class="card-header">
+              <h2 class="text-center">DESARROLLO WEB</h2>
+            </div>
+            <div class="card-body">
+              <!-- row html -->
+              <div class="row mb-3">
+                <div class="col-1 d-flex my-auto">
+                  <i class="fab fa-html5 fs-2 text-danger"></i>
+                </div>
+                <div class="col-11">
+                  <div class="progress" style="height: 27px">
+                    <div class="progress-bar progress-bar-striped bg-danger text-light fw-bold progress-bar-animated"
+                      role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
+                      75%
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- row css -->
+              <div class="row mb-3">
+                <div class="col-1 d-flex my-auto">
+                  <i class="fab fa-css3 fs-2 text-primary"></i>
+                </div>
+                <div class="col-11">
+                  <div class="progress" style="height: 27px; border: 1px solid #cba;">
+                    <div class="progress-bar progress-bar-striped bg-primary text-light fw-bold progress-bar-animated"
+                      role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                      60%
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- row js -->
+              <div class="row">
+                <div class="col-1 d-flex my-auto">
+                  <i class="fab fa-js fs-2 text-warning"></i>
+                </div>
+                <div class="col-11">
+                  <div class="progress" style="height: 27px; border: 1px solid #cba;">
+                    <div class="progress-bar progress-bar-striped bg-warning text-light fw-bold progress-bar-animated"
+                      role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                      60%
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- FRAMEWORKS WEB -->
+        <div class="col-12 col-md-3 col-lg-6 mx-auto">
+          <div class="card px-3 py-3">
+            <div class="card-header">
+              <h2 class="text-center">FRAMEWORKS FRONTEND</h2>
+            </div>
+            <div class="card-body">
+              <!-- row bootstrap -->
+              <div class="row mb-3">
+                <div class="col-1 d-flex my-auto">
+                  <i class="fab fa-bootstrap fs-2" style="color:#7e378b;"></i>
+                </div>
+                <div class="col-11">
+                  <div class="progress" style="height: 27px; border: 1px solid #cba;">
+                    <div class="progress-bar progress-bar-striped text-light fw-bold progress-bar-animated"
+                      role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+                      75%
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- row vuejs   -->
+              <div class="row mb-3">
+                <div class="col-1 d-flex my-auto">
+                  <i class="fab fa-vuejs fs-2 text-success"></i>
+                </div>
+                <div class="col-11">
+                  <div class="progress" style="height: 27px; border: 1px solid #cba;">
+                    <div class="progress-bar progress-bar-striped bg-success text-light fw-bold progress-bar-animated"
+                      role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                      60%
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- row react -->
+              <div class="row">
+                <div class="col-1 d-flex my-auto">
+                  <i class="fab fa-react fs-2 text-info"></i>
+                </div>
+                <div class="col-11">
+                  <div class="progress" style="height: 27px; border: 1px solid #cba">
+                    <div class="progress-bar progress-bar-striped bg-info text-light fw-bold progress-bar-animated"
+                      role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                      50%
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
+    </div>
+
   </section>
+  <footer>
+    <p class="text-center py-2 fs-4 my-auto">&#xa9; EniDev911 2022</p>
+  </footer>
   <!-- music -->
   <div id="sound" class="fixed-bottom text-center"></div>
 
-  <div class="row w-100">
-    <!-- Html -->
-    <div class="col-12 col-md-3 col-lg-5 mx-auto">
-      <div class="card px-3 py-3">
-        <div class="card-body">
-        </div>
-        HTML
-        <div class="progress mb-3" style="height: 30px">
-          <div class="progress-bar progress-bar-striped bg-danger text-light fw-bold progress-bar-animated"
-            role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">75%
-          </div>
-        </div>
-        CSS
-        <div class="progress mb-3" style="height: 30px">
-          <div class="progress-bar progress-bar-striped bg-primary-gradient text-light fw-bold progress-bar-animated"
-            role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">60%
-          </div>
-        </div>
-        JavaScript
-        <div class="progress" style="height: 30px">
-          <div class="progress-bar progress-bar-striped bg-warning text-light fw-bold progress-bar-animated"
-            role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">60%
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Libs and scripts -->
   <!-- Sweet Alert2 -->
@@ -495,6 +579,10 @@
   <!-- Core Bootstrap -->
   <script src="assets/js/lib/bootstrap.bundle.min.js"></script>
   <script src="assets/js/functions.js"></script>
+
+  <script>
+
+  </script>
 </body>
 
 </html>

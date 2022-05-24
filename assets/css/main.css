@@ -19,10 +19,13 @@
 /* ===== color palette  global =========== */
 :root {
     --main-bg-color: hsl(0, 0%, 90%);
-    --primary-color: #fa0;
+    --primary-color: #EF5350;
+    --text-color: hsla(300, 4%, 5%, 0.802);
     --font-normal: "Scope One";
     --font-code: "Cascadia Code";
     --font-code-victor: "Victor Mono";
+    --card-bg-color: hsl(0, 0%, 90%);
+    --card-border-color: hsl(0, 12%, 80%);
 }
 
 body {
@@ -30,70 +33,127 @@ body {
     margin: 0;
     font-family: var(--font-normal);
     background-color: var(--main-bg-color);
-
+    color: var(--text-color);
+    transition: .3s ease all;
 }
 
 body.dark {
     --text-color: hsl(0, 0%, 83%);
     --main-bg-color: hsl(0, 0%, 15%);
+    --card-bg-color: #373a3c;
 }
 
-.card-dark {
-    width: 100%;
-    height: auto;
-    border-bottom: 2px solid #fa0;
-    background: #373a3c;
-    color: var(--text-color);
+body.dark nav {
+    background-color: var(--main-bg-color);
+    backdrop-filter: blur(1.5rem) !important;
+}
+
+body.dark nav .toggle-theme__icon {
+    filter: invert(100%) !important;
+}
+
+
+body.dark .nav-link {
+    color: var(--text-color) !important;
+}
+
+
+body.dark div.card {
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--text-color) !important;
+    transition: transform ease-in-out .3s;
+}
+
+body.dark div.card:hover {
+    border-bottom: 2px solid var(--primary-color);
+    background: #373a3c !important;
+    color: var(--primary-color) !important;
+    border: 1.2px solid var(--primary-color) !important;
+}
+
+body.dark .card-footer a:hover {
+    border: 1px solid var(--text-color) !important;
+    background: var(--primary-color) !important;
+    color: var(--text-color) !important;
+}
+
+
+body.dark section .container,
+body.dark section #about .row:nth-child(1) {
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--text-color) !important;
+    background: var(--card-bg-color) !important;
+}
+
+.card {
+    background-color: var(--card-bg-color) !important;
+    border: 1px solid var(--card-border-color) !important;
+    transition: transform ease-in-out .3s;
+}
+
+.card-hover:hover {
+    transform: scale(1.03);
+    border: 1px solid #373a3c !important;
+
 }
 
 /* Nav */
-.navbar {
-    --opacity: 1;
-    background: rgba(25, 20, 20, var(--opacity)) !important;
-    border-bottom: 2px solid var(--primary-color) !important;
-    font-family: var(--font-code);
+
+
+nav.move {
+    font-family: var(--font-code-victor);
     text-transform: uppercase;
+    backdrop-filter: blur(1.5rem);
+}
+
+nav.move #toggle-icon {
+    filter: invert(100%) !important;
 }
 
 
+.nav-link {
+    color: #fff;
+}
+
 .switches {
-    height: 60px;
     margin-left: 8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .toggle-theme {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     cursor: pointer;
+    align-items: center;
 }
 
 .toggle-theme__icon {
-    align-items: center;
     margin-right: 0.5rem;
     width: 20px;
 }
 
 .toggle-theme__text {
-    font-size: 0.8rem;
-    align-self: center;
+    margin: auto;
+    font-size: 1rem;
 }
 
 .nav-item {
-    transition: background .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    font-size: var(--font-code-victor) !important;
+    font-weight: bolder !important;
+    color: var(--primary-color) !important;
+    text-transform: uppercase;
 }
+
+
 
 .nav-item:hover {
     background: var(--primary-color);
 }
 
 .nav-link:hover {
-    color: var(--main-bg-color) !important;
-    font-weight: bold;
+    color: var(--text-color);
 }
+
+
 
 /* section hero */
 #hero-section {
@@ -109,15 +169,19 @@ body.dark {
 .btn-group-vertical {
     position: absolute;
     left: 4%;
+    top: 15%;
     z-index: 2;
-    filter: drop-shadow(4px 2px 10px #000);
+    filter: drop-shadow(2px 2px 6px #000);
     border-radius: 7px;
     padding: 0 !important;
-    margin: 0 !important;
-    height: auto;
     font-family: var(--font-code-victor);
     text-align: left;
     font-weight: bolder;
+}
+
+.btn-group-vertical button,
+.btn-group-vertical a {
+    background: var(--primary-color);
 }
 
 
@@ -141,6 +205,11 @@ body.dark {
 #works .logo:hover {
     will-change: transform, filter;
     animation: movelogo 1s infinite alternate;
+}
+
+#works .accordion-item:hover>h2 button {
+    background-color: var(--primary-color) !important;
+    color: var(--main-bg-color);
 }
 
 @keyframes movelogo {
@@ -171,10 +240,14 @@ body.dark {
 }
 
 .accordion-item button {
-    /* border: 1px solid #fa0 !important; */
     border: 1px solid var(--text-color) !important;
     color: var(--text-color);
 
+}
+
+.accordion-item button:hover {
+    border: 1px solid var(--text-color) !important;
+    color: var(--text-color);
 }
 
 .accordion-header button i {
@@ -188,14 +261,25 @@ body.dark {
 }
 
 .card-footer a {
-    /* border: 1px solid #fa0 !important;*/
     border: 1px solid var(--text-color) !important;
     color: var(--text-color);
+    transition: all .3s ease-in-out;
 }
+
+.card-footer a:hover {
+    border: 1px solid var(--text-color) !important;
+    background: #ccc;
+    color: #373a3c;
+}
+
+.accordion-header button {
+    background-color: var(--primary-color);
+}
+
 
 /* Skills and software */
 
-#skill .logo {
+#skill-software .logo {
     filter: drop-shadow(2px 8px 6px #000);
     transition: transform .5s;
     transition-property: transform;
@@ -205,7 +289,7 @@ body.dark {
     cursor: pointer;
 }
 
-#skill .logo:hover {
+#skill-software .logo:hover {
     will-change: transform, filter;
     filter: drop-shadow(4px 2px 10px var(--primary-color));
     transform: scale(1.4);
@@ -218,17 +302,6 @@ body.dark {
     color: #fff !important;
 }
 
-.card-hover {
-    transition: transform ease-in-out .3s;
-}
-
-.card-hover:hover {
-    transform: scale(1.03);
-    box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.2);
-    border: 0.01em solid #fa0 !important;
-    background: #373a3c !important;
-    color: #fa0;
-}
 
 /* media querie */
 @media only screen and (max-width: 680px) {

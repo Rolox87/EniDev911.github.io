@@ -1,7 +1,70 @@
+// path static
 const relativePathImage = "assets/img/";
 const relativePathMedia = "assets/media/"
 
 
+const toggleTheme = document.getElementById('toggle-theme');
+const skillSection = document.getElementById('skill-software');
+const toggleIcon = document.getElementById("toggle-icon");
+const toggleText = document.getElementById("toggle-text");
+let nav = document.getElementById('navbar');
+const card = document.querySelector('.card');
+
+toggleTheme.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+
+    if (toggleIcon.src.includes('moon.svg')) {
+        toggleIcon.src = "assets/img/logo/sun.svg";
+        toggleText.textContent = "Light Mode";
+        toggleTheme.classList.add('bg-warning', 'text-dark');
+        toggleTheme.classList.add('bg-warning', 'text-dark');
+    } else {
+        toggleIcon.src = "assets/img/logo/moon.svg";
+        toggleText.textContent = "Dark Mode";
+        toggleTheme.classList.remove('bg-warning', 'text-dark');
+
+    }
+
+});
+
+window.addEventListener('scroll', () => {
+    const carousel = document.getElementById('carouselVideo');
+    nav.classList.remove('move', 'navbar-light');
+    if (window.pageYOffset > 30) {
+        nav.classList.add('move', 'shadow');
+
+        if (window.pageYOffset > carousel.clientHeight - 20) {
+            nav.classList.add('navbar-light');
+        }
+    } else {
+        nav.classList.remove('move', 'navbar-light');
+    }
+});
+
+
+function showMessage(title, image, message) {
+    this.title = title;
+    this.image = relativePathImage + 'software/' + image;
+    this.message = message;
+    let background = "#373a3c";
+    let color = "#fff";
+    if (toggleIcon.src.includes("moon.svg")) {
+        background = "";
+        color = "";
+    }
+    Swal.fire({
+        title: this.title,
+        imageUrl: this.image,
+        imageWidth: "140px",
+        html: this.message,
+        background: background,
+        color: color,
+        grow: 'column',
+        confirmButtonColor: "#EF5350",
+        confirmButtonText: "entendido"
+
+    })
+}
 function showAvatar() {
     Swal.fire({
         title: "<h2 class='text-center'><code class='fs-1 text-center' style='color: #f50;'><i class='fas fa-user-secret fs-1'></i> {EniDev911}</code></h2>",
